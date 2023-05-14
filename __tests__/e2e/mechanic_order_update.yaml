@@ -1,0 +1,30 @@
+appId: com.pntx.fixmyride
+---
+- launchApp
+- tapOn: "Mechanic"
+# Login Start
+- tapOn:
+    point: "50%,30%"
+- inputText: "test-mechanic@gmail.com"
+- tapOn:
+    point: "50%,40%"
+- inputText: "test-password"
+- tapOn:
+    text: "Login"
+    index: 1
+# Login End
+- tapOn: "Ongoing"
+- extendedWaitUntil:
+    visible: "Test Service"
+    timeout: 5000
+- tapOn: "100%"
+- extendedWaitUntil:
+    visible: "Mark as Completed"
+    timeout: 5000
+- tapOn: "Mark as Completed"
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn: "Completed"
+- extendedWaitUntil:
+    visible: "Test Service"
+    timeout: 10000

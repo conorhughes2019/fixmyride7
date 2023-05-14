@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "scheme": "fixmyride",
+    "name": "Fix My Ride",
+    "slug": "fixmyride",
+    "version": "0.0.2",
+    "icon": "./assets/logo.png",
+    "engine": "hermes",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1c1c1e"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "build": {
+      "development": {
+        "developmentClient": true,
+        "distribution": "internal"
+      },
+      "preview": {
+        "channel": "preview",
+        "distribution": "internal",
+        "android": {
+          "buildType": "apk"
+        }
+      },
+      "production": {
+        "channel": "production"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8cf2e86e-ce20-414f-914c-68e0159b0996"
+      }
+    },
+    "android": {
+      "package": "com.pntx.fixmyride",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDR9upnsfCnwoiUj38gQpTDA7H7kg4TbWo"
+        }
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.pntx.fixmyride"
+    }
+  }
+}

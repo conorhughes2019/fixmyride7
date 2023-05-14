@@ -1,0 +1,27 @@
+# flow.yaml
+
+appId: com.pntx.fixmyride
+---
+- launchApp
+- tapOn: "Driver"
+- tapOn: "SignUp Instead"
+- tapOn:
+    point: "50%,30%"
+- "inputRandomPersonName"
+- tapOn:
+    point: "50%,40%"
+- "inputRandomEmail"
+- tapOn:
+    point: "50%,50%"
+- inputText: "0734348790"
+- tapOn:
+    point: "50%,59%"
+- inputText: "test-password"
+- "hideKeyboard"
+- tapOn:
+    point: "50%,70%"
+- inputText: "test-password"
+- "hideKeyboard"
+- tapOn:
+    point: "50%,77%"
+- tapOn: "SignUp"

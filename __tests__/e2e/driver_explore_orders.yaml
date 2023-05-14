@@ -1,0 +1,40 @@
+appId: com.pntx.fixmyride
+---
+- launchApp
+- tapOn: "Driver"
+# Login Start
+- tapOn:
+    point: "50%,30%"
+- inputText: "kate@gmail.com"
+- tapOn:
+    point: "50%,40%"
+- inputText: "12345678"
+- tapOn:
+    text: "Login"
+    index: 1
+# Login End
+- extendedWaitUntil:
+    notVisible: "Login" # or any other selector
+    timeout: 10000
+
+- swipe:
+    start: "90%, 90%"
+    end: "10%, 90%"
+
+- tapOn:
+    id: "orders button"
+- extendedWaitUntil:
+    visible: "Pending" # or any other selector
+    timeout: 10000
+- tapOn: "Delete"
+- tapOn: "Yes"
+- tapOn: "Ongoing"
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn: "Completed"
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn: "Rejected"
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn: "Pending"

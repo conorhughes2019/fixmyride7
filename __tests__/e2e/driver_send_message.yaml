@@ -1,0 +1,45 @@
+appId: com.pntx.fixmyride
+---
+- launchApp
+- tapOn: "Driver"
+# Login Start
+- tapOn:
+    point: "50%,30%"
+- inputText: "kate@gmail.com"
+- tapOn:
+    point: "50%,40%"
+- inputText: "12345678"
+- tapOn:
+    text: "Login"
+    index: 1
+# Login End
+- extendedWaitUntil:
+    notVisible: "Login" # or any other selector
+    timeout: 10000
+
+- swipe:
+    start: "90%, 90%"
+    end: "10%, 90%"
+
+- tapOn:
+    id: "chats button"
+
+- extendedWaitUntil:
+    visible: "Test Service"
+    timeout: 10000
+
+- tapOn: "Test Service"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- tapOn:
+    id: "Type a message..."
+
+- inputText: "Test Message from Driver"
+
+- tapOn: "send"
+- "hideKeyboard"
+- waitForAnimationToEnd:
+    timeout: 1000
+- assertVisible: "Test Message from Driver"

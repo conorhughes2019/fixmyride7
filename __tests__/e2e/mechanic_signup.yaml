@@ -1,0 +1,46 @@
+# flow.yaml
+
+appId: com.pntx.fixmyride
+---
+- launchApp
+- tapOn: "Mechanic"
+- tapOn: "SignUp Instead"
+- tapOn:
+    point: "50%,25%"
+# - "inputRandomPersonName"
+- inputText: "Test Mechanic"
+- "hideKeyboard"
+- tapOn:
+    point: "50%,35%"
+- inputText: "test-mechanic@gmail.com"
+# - "inputRandomEmail"
+- "hideKeyboard"
+
+- tapOn:
+    point: "50%,45%"
+- inputText: "0734348790"
+- "hideKeyboard"
+
+- tapOn:
+    point: "10%,53%"
+- inputText: "test-password"
+- "hideKeyboard"
+
+- tapOn:
+    point: "50%,65%"
+- inputText: "test-password"
+- "hideKeyboard"
+
+- tapOn: "Add Location"
+
+- extendedWaitUntil:
+    visible: "Done"
+    timeout: 5000
+- tapOn: "Done"
+- waitForAnimationToEnd:
+    timeout: 1000
+- assertVisible: "Edit Location"
+- tapOn: "SignUp"
+- extendedWaitUntil:
+    notVisible: "Create Account"
+    timeout: 10000

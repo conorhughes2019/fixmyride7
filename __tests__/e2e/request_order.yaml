@@ -1,0 +1,33 @@
+appId: com.pntx.fixmyride
+---
+- launchApp
+- tapOn: "Driver"
+# Login Start
+- tapOn:
+    point: "50%,30%"
+- inputText: "kate@gmail.com"
+- "hideKeyboard"
+- tapOn:
+    point: "50%,40%"
+- inputText: "12345678"
+- "hideKeyboard"
+- tapOn:
+    text: "Login"
+    index: 1
+# Login End
+- extendedWaitUntil:
+    notVisible: "Login"
+    timeout: 10000
+- tapOn: "Request"
+- tapOn:
+    point: "50%,63%"
+- inputText: "Test Service"
+- "hideKeyboard"
+- tapOn:
+    point: "50%,78%"
+- inputText: "Test suite description"
+- "hideKeyboard"
+- tapOn: "Send Request"
+- extendedWaitUntil:
+    visible: "Request Sent"
+    timeout: 5000
